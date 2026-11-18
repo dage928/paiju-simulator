@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf0eb">
+  <meta name="description" content="用一台2.8英寸屏幕的虚拟设备，试用TCG计数、计时、硬币与复盘录音。">
+  <title>牌局 1.0 · 2.8英寸设备模拟器</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./device.css">
+  <link rel="stylesheet" href="./duel-theme.css">
+  <link rel="stylesheet" href="./readability.css">
+  <link rel="stylesheet" href="./rift.css">
+  <link rel="stylesheet" href="./pokemon.css">
+  <link rel="stylesheet" href="./volume.css">
+  <link rel="stylesheet" href="./home.css">
+  <script type="module" src="./device.mjs"></script>
+</head>
+<body>
+  <header class="sim-header"><a class="sim-brand" href="./"><img src="./favicon.svg" alt=""><strong>牌局</strong><span>设备模拟器</span></a><span class="prototype-label">模拟器 v1.0</span></header>
+  <main class="sim-workspace">
+    <section class="device-stage" aria-label="目标设备交互模拟">
+      <div class="stage-heading"><h1>一块小屏，一场牌局。</h1><p>直接点击设备屏幕，试试真实产品的操作流程。</p></div>
+      <div id="device-wrap" class="device-wrap">
+        <div class="device-body">
+          <div class="shell-top-mark" aria-hidden="true">PAIJU</div>
+          <div id="device-screen" class="device-screen" role="region" aria-label="2.8英寸触控屏，暂定240乘320像素"></div>
+          <span class="mic-hole" aria-hidden="true"></span>
+          <div class="hardware-controls" aria-label="正面屏幕右侧边框实体按键">
+            <button id="key-minus" class="hardware-button" data-hardware="minus" aria-label="实体减号键">−</button>
+            <button id="key-select" class="hardware-button select-key" data-hardware="select" aria-label="实体切换键"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-4-4M19 17H5l4 4M19 7l-4 4M5 17l4-4"/></svg></button>
+            <button id="key-plus" class="hardware-button" data-hardware="plus" aria-label="实体加号键">＋</button>
+          </div>
+          <button id="key-record" class="record-side-key" aria-label="机身右侧面录音返回键，短按返回，长按录音松开保存"><span>返回 / 录音</span></button>
+          <div class="shell-bottom-mark" aria-hidden="true">TCG COMPANION</div>
+        </div>
+      </div>
+      <p class="device-caption"><span class="caption-dot"></span>正面右侧三键 · 侧面录音返回键</p>
+    </section>
+    <aside class="sim-settings" aria-label="模拟器设置与说明">
+      <div class="settings-section"><h2>显示比例</h2><div class="scale-options"><button data-scale="1.35" aria-pressed="true">放大操作</button><button data-scale="1" aria-pressed="false">原始像素</button><button data-scale="real" aria-pressed="false">真实尺寸</button></div><p>缩放只改变预览大小，设备界面始终限制在同一块小屏内。</p><div id="physical-preview" hidden><p><strong>2.8 英寸 · 显示区 43.2 × 57.6 mm</strong><br>用尺子测量下方线段，输入实测长度后校准。只校准屏幕，外壳仍为概念尺寸。</p><p>目标线长：50 毫米（测两端竖线）</p><div class="calibration-ruler" aria-label="目标长度50毫米的校准线"><div id="calibration-line"></div></div><form id="calibration-form"><label for="measured-length">尺子测到的长度（毫米）</label><div class="calibration-input"><input id="measured-length" type="number" min="10" max="300" step="0.1" required inputmode="decimal" placeholder="输入实测值"><button type="submit">校准</button></div></form><p id="calibration-status" role="status"></p><button id="reset-calibration" type="button">重置校准</button><p>换显示器或调整浏览器、系统缩放后，请重新校准。可在约 30 厘米、50 厘米处分别试读；预览不能模拟实物屏幕的反光和视角。</p></div></div>
+      <div class="settings-section"><h2>这次模拟的设备</h2><dl class="device-specs"><div><dt>屏幕对角线</dt><dd>2.8 英寸</dd></div><div><dt>界面画布</dt><dd>240 × 320 <span>暂定</span></dd></div><div><dt>显示区参考</dt><dd>43.2 × 57.6 mm</dd></div><div><dt>输入方式</dt><dd>触控 ＋ 实体按键</dd></div></dl><p>分辨率、外壳和按键数量用于本轮验证，尚未选定具体硬件。真实尺寸须用尺子校准后判断。</p></div>
+      <div class="settings-section"><h2>试试这些操作</h2><ol class="try-list"><li>屏幕任意页面向下拖动可调音量；加减键或滑条调节，确认或返回退出。</li><li>主菜单左右滑动切换游戏；加减键选择开始对局或对局复盘，中间键确认。</li><li>游戏王加减输入后确认，½ 立即减半；符文战场加减键只改得分，经验值仅触屏加减，均可撤销。</li><li>中间键短按交接回合；符文战场同时切换双方计分对象，无须长按。</li><li>更多 → 结束本局，依次选择赛制、胜负，再录音复盘并保存。</li></ol><div class="keyboard-legend"><span><kbd>A</kbd> 上选 / 减少</span><span><kbd>S</kbd> 确认 / 切换双方</span><span><kbd>D</kbd> 下选 / 增加</span><span><kbd>R</kbd> 短按返回 / 长按录音</span><span><kbd>Esc</kbd> 返回</span></div></div>
+      <div class="settings-section data-note"><span id="save-indicator" class="save-indicator">记录保存在本机</span><p id="host-message" aria-live="polite">短按 R 或右侧录音键返回，长按约半秒开始录音，松开保存。历史最多 30 场，满额时手动删旧记录。首次录音需要麦克风授权。</p></div>
+      <details id="computer-manager" class="computer-manager"><summary>电脑管理 · 记录与备份</summary><p>仅供网页端整理记录，不属于设备屏幕功能。</p><button id="host-import">导入对局备份</button><p id="manager-message" role="status"></p><div id="manager-list"></div></details>
+    </aside>
+  </main>
+  <footer class="sim-footer">先在 2.8 英寸里把操作做对，再选择芯片、屏幕与外壳。</footer>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript>设备模拟器需要启用 JavaScript。</noscript>
+</body>
+</html>

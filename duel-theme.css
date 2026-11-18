@@ -1,0 +1,74 @@
+/* DuelTools cyan variant, redrawn for the existing 240 × 320 product. */
+@font-face{font-family:"Paiju Duel Digits";src:url("./fonts/duel-digits.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+.ygo-theme{--paper:#edf1f4;--ink:#162b3e;--muted:#506678;--line:#ccd6de;--accent:#72d9ec;--screen-bg:#061726;--screen-panel:#0a3047;--screen-text:#f0faff;--screen-muted:#a3ccde}
+.ygo-theme ::selection{background:#78ddeb;color:#062133}
+.ygo-theme button:focus-visible,.ygo-theme input:focus-visible,.ygo-theme textarea:focus-visible{outline-color:#9beeff}
+.ygo-theme .sim-brand>span{border-color:#becdd7}.ygo-theme .caption-dot,.ygo-theme .save-indicator:before{background:#25859e}.ygo-theme .save-indicator{color:#3b6379}.ygo-theme kbd{background:#dbe5eb;color:#26465c}
+.ygo-theme .scale-options button{border-color:#b6c9d5}.ygo-theme .scale-options button[aria-pressed=true]{background:#16384d;border-color:#16384d}
+.ygo-theme .device-body{background:linear-gradient(125deg,#343f4a,#171f29 75%);box-shadow:inset 0 1px 1px #788c9a,inset 0 -3px 1px #0c121b,0 17px 30px #1526352b,0 3px 6px #1526351c}
+.ygo-theme .device-screen{outline-color:#080f19}.ygo-theme .shell-top-mark,.ygo-theme .shell-bottom-mark{color:#9bb0c0}
+.ygo-theme .hardware-button{background:linear-gradient(90deg,#4c6274,#304251);color:#ecf9ff;box-shadow:inset 2px 0 1px #7b93a5,-2px 1px 3px #101a2659}
+.ygo-theme .hardware-button.select-key{background:linear-gradient(90deg,#8be4f1,#42a9c6);color:#092334;box-shadow:inset 2px 0 1px #c5f7ff,-2px 1px 3px #101a2659}
+.ygo-theme .record-side-key{background:#49647b;box-shadow:inset -2px 0 1px #24384c;color:#effaff}.ygo-theme .record-side-key.recording{background:#c94c50}
+.ygo-theme .screen-header,.ygo-theme .screen-nav{background:#071521;border-color:#35657b}.ygo-theme .screen-nav button{color:#a8cbdf}.ygo-theme .screen-nav button[aria-current=page]{color:#95eaf5;background:#13374e;border-color:#72d9ec}
+.ygo-theme .game-trigger,.ygo-theme .screen-titlebar,.ygo-theme .full-header{color:#effaff;border-color:#2a5068}.ygo-theme .screen-back,.ygo-theme .screen-titlebar>.right,.ygo-theme .screen-hint{color:#a3ccde}
+.ygo-theme .duel-player{position:relative;background:linear-gradient(180deg,#0c2d44,#071c2e);isolation:isolate}
+.ygo-theme .duel-player:before{content:"";position:absolute;inset:5px 7px;z-index:-1;pointer-events:none;border:1px solid #28536d;clip-path:polygon(0 0,75% 0,82% 5px,100% 5px,100% 100%,18% 100%,12% calc(100% - 5px),0 calc(100% - 5px))}
+.ygo-theme .duel-player.selected{background:linear-gradient(180deg,#104560,#08283e)}
+.ygo-theme .duel-player.selected:before{border-color:#6ac8dc}
+.ygo-theme .duel-life{font-family:"Paiju Duel Digits",var(--mono)!important;font-size:52px!important;font-weight:400!important;letter-spacing:.015em;line-height:1!important;color:#f4fbff;text-shadow:0 2px 1px #020c18}
+.ygo-theme .duel-clock{color:#9abbd1}.ygo-theme .duel-clock time{font-size:16px;font-weight:500}.ygo-theme .duel-clock.running{color:#8beaf5}.ygo-theme .duel-clock.running time{font-weight:700}
+.ygo-theme .duel-actions{gap:10px}.ygo-theme .duel-actions button{background:#0d3048;color:#e2f5ff;border:1px solid #35728c;border-radius:0;clip-path:polygon(5px 0,100% 0,100% calc(100% - 5px),calc(100% - 5px) 100%,0 100%,0 5px)}
+.ygo-theme .duel-actions button:last-child{background:#135573;color:#d4f8ff;border-color:#62bfd9}
+.ygo-theme .duel-axis{background:#06131f;border-block-color:#3c819b}.ygo-theme .duel-axis button{color:#99c5dc}.ygo-theme .duel-axis .duel-coin{color:#efd47d}
+.ygo-theme .solo-opponent-clock{background:#09263b}
+.ygo-theme .screen-action{background:linear-gradient(180deg,#14627b,#0c3c57)!important;color:#f0fcff!important;border:1px solid #78d8eb!important;border-radius:0!important;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px)}
+.ygo-theme .screen-action.secondary{background:#102b40!important;border-color:#466d86!important;color:#c9e4f4!important}
+.ygo-theme .screen-action.danger{background:#733e48!important;border-color:#cc8792!important}
+.ygo-theme .duel-ready{background:linear-gradient(180deg,#0b344c,#061624);position:relative;isolation:isolate}
+.ygo-theme .duel-ready:before{content:"";position:absolute;inset:10px;z-index:-1;border:1px solid #356a83;clip-path:polygon(0 0,70% 0,80% 8px,100% 8px,100% 100%,30% 100%,20% calc(100% - 8px),0 calc(100% - 8px));pointer-events:none}
+.ygo-theme .duel-ready h2{font-size:22px;letter-spacing:.06em;color:#ecf9ff}.ygo-theme .duel-ready p,.ygo-theme .duel-ready>small,.ygo-theme .order-actions p{color:#a8cddd}
+.ygo-theme .duel-order,.ygo-theme .full-screen{background:#071e30}
+.ygo-theme .calc-value{background:#041421;border-bottom:1px solid #42768d;color:#f4fbff}.ygo-theme .calc-value small{color:#a3ccde}
+.ygo-theme .keypad{gap:4px;padding:5px;background:#071b2b;border-color:#28536d}
+.ygo-theme .keypad button{background:linear-gradient(145deg,#0a3b5b,#082a43);color:#81d4f4;border:1px solid #255d7a;border-radius:3px;font-family:"Paiju Duel Digits",var(--mono);font-size:24px}
+.ygo-theme .keypad button.utility{font-family:"Segoe UI","Microsoft YaHei UI",sans-serif;font-size:11px;color:#c0dfef;background:#18354a}
+.ygo-theme .calc-submit{background:#155573!important;color:#f3fcff!important;border-top:1px solid #7cd6eb}
+.ygo-theme .more-grid button,.ygo-theme .screen-list button{background:#0c2e45;color:#e8f7ff;border:1px solid #326780;border-radius:2px}.ygo-theme .screen-list button small,.ygo-theme .screen-list button .trailing{color:#a3ccde}
+.ygo-theme .split-switch{background:#041421}.ygo-theme .split-switch button[aria-pressed=true]{background:#286780;color:#f1fbff}
+.ygo-theme .random-overlay{background:#020a14dc}.ygo-theme .random-card{background:linear-gradient(180deg,#104661,#081e31);border-color:#79d0e3;border-radius:2px;box-shadow:0 8px 16px #01071066}
+.ygo-theme .popup-coin,.ygo-theme .coin-disc{background:radial-gradient(circle at 35% 30%,#fff1b6,#d6ac40);color:#51421b;border-color:#cfb975;box-shadow:inset 0 0 0 2px #ffebb3,0 4px 7px #0004}
+.ygo-theme .coin-results{color:#c6e5f4}.ygo-theme .coin-footnote{color:#a3ccde}.ygo-theme .coin-amounts button{border-color:#3e819c}.ygo-theme .coin-amounts button[aria-pressed=true]{background:#23627d;color:#effaff;border-color:#72d9ec}
+.ygo-theme .log-item,.ygo-theme .history-item,.ygo-theme .setting-row{border-color:#2f536c}.ygo-theme .log-item small,.ygo-theme .empty-screen,.ygo-theme .detail-text,.ygo-theme .audio-time,.ygo-theme .confirm-overlay p{color:#b8d8e9}
+.ygo-theme .page-pad,.ygo-theme .log-scroll{scrollbar-color:#4d8ea6 transparent}
+.ygo-theme .screen-toast{background:#c5e8f2;color:#102d42;border-color:#70afc6}.ygo-theme .record-overlay{background:#071e30}.ygo-theme .record-overlay .screen-hint{color:#b8d8e9}
+.ygo-theme .screen-content button:active,.ygo-theme .full-screen button:active{filter:brightness(1.22)}
+
+.ygo-theme .duel-life.life-rolling{color:#b4efff}
+
+.ygo-theme .source-art{background:none!important;border:0!important;box-shadow:none!important;border-radius:0}
+.random-art{display:block;position:relative;width:100%;height:100%;pointer-events:none}.random-art img{display:block;width:100%;height:100%;object-fit:contain}.duel-coin .random-art{width:32px;height:32px}
+.coin-art{transform-style:preserve-3d}.coin-art .coin-front,.coin-art .coin-back{position:absolute;inset:0;backface-visibility:hidden}.coin-art .coin-back{transform:rotateY(180deg)}
+.dice-art{overflow:hidden}.dice-art>img{position:absolute;width:180%;height:180%;max-width:none;left:-40%;top:-40%}
+.art-flipping{animation:source-coin-flip 1s ease-out both}.dice-frames{position:absolute;inset:-40%;background:url('./art/dueltools/dice-roll-1.png') center/contain no-repeat;animation:source-dice-frames 1s steps(1,end) both}
+@keyframes source-coin-flip{0%{transform:translateY(5px) rotateY(0)}35%{transform:translateY(-9px) rotateY(540deg)}100%{transform:translateY(0) rotateY(1440deg)}}
+@keyframes source-dice-frames{0%,50%{background-image:url('./art/dueltools/dice-roll-1.png')}10%,60%{background-image:url('./art/dueltools/dice-roll-2.png')}20%,70%{background-image:url('./art/dueltools/dice-roll-3.png')}30%,80%{background-image:url('./art/dueltools/dice-roll-4.png')}40%,90%,100%{background-image:url('./art/dueltools/dice-roll-5.png')}}
+@media(prefers-reduced-motion:reduce){.art-flipping,.dice-frames{animation:none!important}.coin-art .coin-back{display:none}}
+/* One settlement sheet: horizontal choices, vertical confirmation cursor. */
+.device-screen .settle-sheet{padding:15px 12px 10px;display:grid;gap:10px}
+.device-screen .settle-row{display:grid;grid-template-columns:28px 1fr 28px;align-items:stretch;min-height:61px;border:1px solid #335d73;background:#0a263a;color:#d9edf7}
+.device-screen .settle-row.row-active{border-color:#87e4f0;background:#174b61}
+.device-screen .settle-row button{color:inherit;background:none;border:0;padding:0}
+.device-screen .settle-row .row-value{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0}
+.device-screen .row-value small{font-size:9px;color:#b0d3e4}.device-screen .row-value strong{font-size:16px;font-weight:500;line-height:1.3;white-space:nowrap}
+.device-screen .settle-row:first-child .row-value strong{font-size:20px}
+.device-screen .row-arrow{display:grid;place-items:center}.device-screen .row-arrow:last-child svg{transform:rotate(180deg)}
+.device-screen .row-fixed{border-color:#284c61}.device-screen .row-fixed .row-value:disabled{opacity:1}
+.device-screen .settle-help{font-size:10px;line-height:1.7;text-align:center;color:#a3ccde;margin-top:1px}
+/* All three results stay visible; the active result receives hardware focus. */
+.device-screen .settle-result{height:61px;display:flex;flex-direction:column;gap:4px;padding:5px 7px;border:1px solid #335d73;background:#0a263a}
+.device-screen .settle-result>small{font-size:9px;line-height:12px;text-align:center;color:#b0d3e4}
+.device-screen .settle-result-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;flex:1;min-height:0}
+.device-screen .settle-result-buttons button{border:1px solid #426e83;background:#0c2d44;color:#d9edf7;font-size:17px;padding:0;min-height:30px}
+.device-screen .settle-result-buttons button[aria-pressed=true]{background:#215b72;border-color:#87e4f0;color:#f0fcff}
+.device-screen .settle-result.row-active{border-color:#87e4f0}

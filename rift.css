@@ -1,0 +1,128 @@
+/* Riftbound: blue fields, gold player markers; score leads, XP stays outside. */
+.rift-theme{--accent:#e6bc53;--screen-bg:#172c39;--screen-panel:#173e54;--screen-text:#f5fafc;--screen-muted:#bfd3df}
+.rift-theme .device-screen{background:#172c39;outline-color:#101c26}
+.rift-theme .device-body{background:linear-gradient(130deg,#34404c,#1c242d 65%)}
+.rift-theme .hardware-button{background:linear-gradient(90deg,#4a6475,#334b5b);color:#edf5fa;box-shadow:inset 2px 0 1px #839ba8,-2px 1px 3px #10211459}
+.rift-theme .hardware-button.select-key{background:#d9b24f;color:#192b36;box-shadow:inset 2px 0 1px #f3d890,-2px 1px 3px #10211459}
+.rift-theme .record-side-key{background:#425f73;color:#f4fafc}
+.rift-theme .record-side-key.recording{background:#c94c50}
+.rift-theme .screen-header,.rift-theme .screen-nav{background:#122630;border-color:#365569}
+.rift-theme .screen-nav button{color:#d1dfe7}
+.rift-theme .screen-nav button[aria-current=page]{color:#f2ce73;background:#23485c}
+.rift-theme .device-screen .screen-action{background:#d9b24f!important;color:#142b3b!important;border-radius:2px!important}
+.rift-theme .device-screen .screen-action.secondary{background:#1a4056!important;color:#eff7fb!important;border:1px solid #55788b!important}
+.rift-theme .device-screen .screen-action.danger{background:#713b42!important;color:#fff2ed!important}
+.rift-theme .device-screen .hw-selected{outline-color:#e6bc53;box-shadow:inset 0 0 0 1px #e6bc53;background-color:#214d65!important}
+.rift-theme .device-screen .screen-action.hw-selected{color:#fff4d4!important}
+.rift-theme .device-screen .flow-choice.chosen,.rift-theme .device-screen .settle-row.row-active{border-color:#e6bc53;background:#214d65}
+.rift-theme .device-screen .settle-result.row-active{border-color:#e6bc53}
+.rift-theme .device-screen .settle-result-buttons button[aria-pressed=true]{border-color:#e6bc53;background:#33525a;color:#fff5d5}
+.rift-theme .device-screen .record-tabs button[aria-pressed=true]{background:#244b60;color:#ffe1a0}
+.rift-theme .device-screen .flow-header,.rift-theme .device-screen .record-tabs{border-color:#426278}
+.rift-theme .device-screen .screen-titlebar,.rift-theme .device-screen .full-header{border-color:#426278;color:#f5fafc}
+.rift-theme .device-screen .empty-screen,.rift-theme .device-screen .detail-text,.rift-theme .device-screen .screen-hint,.rift-theme .device-screen .audio-time{color:#bfd3df}
+.rift-theme .device-screen .log-item{border-color:#426278}
+.rift-theme .device-screen .log-item small{color:#bfd3df}
+.rift-theme .device-screen .more-grid button{background:#173e54;border:1px solid #426278;border-radius:2px;color:#f4fafc;font-size:16px}
+.rift-theme .duel-ready{background:#172c39}
+.rift-theme .duel-ready h2{color:#f5fafc}
+.rift-theme .duel-ready p,.rift-theme .duel-ready>small,.rift-theme .order-actions p{color:#bfd3df}
+.rift-theme .duel-order{background:#172c39}
+.rift-theme .order-actions p{font-size:15px;line-height:1.5}
+.rift-theme .duel-ready p{font-size:16px;padding:0 12px}
+.rift-theme .duel-ready>small{font-size:13px}
+.rift-theme .split-switch{background:#10232e}
+.rift-theme .split-switch button[aria-pressed=true]{background:#31556b;color:#fff3d0}
+.rift-theme .setting-row{border-color:#426278}
+.rift-theme .rift-board{width:240px;height:320px;display:grid;grid-template-rows:140px 40px 140px;background:#152a36}
+.rift-theme .rift-player{min-height:0;display:grid;grid-template-rows:22px 74px 32px;gap:2px;padding:4px 6px;background:#173f57;color:#f5fafc}
+.rift-theme .rift-player.opponent{transform:rotate(180deg)}
+.rift-theme .rift-clock{display:flex;align-items:center;justify-content:space-between;color:#c4d7e2;font-size:14px;line-height:1}
+.rift-theme .rift-clock>span{display:flex;align-items:center;gap:4px}
+.rift-theme .rift-clock svg{width:12px;height:12px}
+.rift-theme .rift-clock time{font:20px var(--mono);font-variant-numeric:tabular-nums}
+.rift-theme .rift-clock.running{color:#ffe097}
+.rift-theme .rift-score-row{display:grid;grid-template-columns:42px 1fr 42px;align-items:stretch}
+.rift-theme .rift-score-row>button:not(.rift-value){font-size:34px;color:#d3e3eb}
+.rift-theme .device-screen .rift-value{display:flex;align-items:center;justify-content:center;min-height:0}
+.rift-theme .rift-score{flex-direction:column;gap:0;border:1px solid transparent!important}
+.rift-theme .rift-score strong{font:600 52px/1 "Bahnschrift","Segoe UI",sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.rift-theme .rift-score span{font-size:14px;line-height:16px}
+.rift-theme .device-screen .rift-selected{border:1px solid #e6bc53!important;background:#1b4b63;color:#fff8e7}
+.rift-theme .rift-xp-row{display:grid;grid-template-columns:1.65fr 1fr 1fr;background:#183449;border-top:1px solid #3d6074}
+.rift-theme .rift-xp-value{gap:5px;border:1px solid transparent!important}
+.rift-theme .rift-xp-value strong{font:600 24px/1 "Bahnschrift","Segoe UI",sans-serif;font-variant-numeric:tabular-nums}
+.rift-theme .rift-xp-value span{font-size:14px}
+.rift-theme .rift-xp-row>button:not(.rift-value){font-size:24px;border-left:1px solid #3d6074;color:#d3e3eb}
+.rift-theme .rift-axis{display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;background:#122631;border-block:1px solid #536d7b}
+.rift-theme .rift-axis button{display:grid;place-items:center;color:#f1ca6c}
+.rift-theme .rift-axis svg{width:22px;height:22px}
+.rift-theme .rift-board.rift-solo{grid-template-rows:44px 40px 236px}
+.rift-theme .rift-solo .rift-player{grid-template-rows:26px 148px 44px;padding:6px;gap:3px}
+.rift-theme .rift-solo .rift-score strong{font-size:72px}
+.rift-theme .rift-solo .rift-xp-value strong{font-size:30px}
+.rift-theme .rift-opponent-clock{display:flex;justify-content:space-between;align-items:center;padding:0 12px;font-size:16px;color:#bfd3df}
+.rift-theme .rift-opponent-clock time{font:20px var(--mono)}
+.rift-theme .random-overlay{background:#0c1824e8}
+.rift-theme .random-card{border-color:#d9b24f;border-radius:3px;background:#163a50}
+.rift-theme .random-result,.rift-theme .random-mirrored{font-size:18px;color:#fff5d5}
+.rift-theme .popup-coin{background:none;border:0;box-shadow:none;border-radius:0}
+
+/* Six small SVG faces; one bounded roll, with no canvas or frame loop. */
+.rift-dice-stage{display:block;position:relative;width:88px;height:94px;perspective:250px}
+.rift-dice-shadow{position:absolute;left:15px;bottom:1px;width:58px;height:10px;border-radius:50%;background:#081d2b80;transform:scaleX(.9)}
+.rift-dice-lift{position:absolute;left:14px;top:12px;width:60px;height:60px;transform-style:preserve-3d}
+.rift-dice-cube{display:block;position:relative;width:60px;height:60px;transform-style:preserve-3d;transform:translateZ(-30px)}
+.rift-dice-face{position:absolute;inset:0;display:block;backface-visibility:hidden;background:#234b63;border-radius:5px}
+.rift-dice-face svg{display:block;width:60px;height:60px;stroke:#eccb7b;stroke-width:2;fill:#234b63}
+.rift-dice-face .rift-pip{fill:#fff2ca;stroke:none}
+.rift-dice-face .rift-rune path:first-child{fill:#ddb45c;stroke:#ffe1a0;stroke-width:1.5}
+.rift-dice-face .rift-rune path+path{fill:none;stroke:#17384b;stroke-width:4;stroke-linejoin:miter}
+.rift-dice-face.face-front{transform:translateZ(30px)}
+.rift-dice-face.face-back{transform:rotateY(180deg) translateZ(30px)}
+.rift-dice-face.face-right{transform:rotateY(90deg) translateZ(30px)}
+.rift-dice-face.face-left{transform:rotateY(-90deg) translateZ(30px)}
+.rift-dice-face.face-top{transform:rotateX(90deg) translateZ(30px)}
+.rift-dice-face.face-bottom{transform:rotateX(-90deg) translateZ(30px)}
+.rift-dice-stage.is-rolling .rift-dice-cube{animation:rift-dice-roll var(--rift-roll-ms) cubic-bezier(.12,.66,.24,1) both}
+.rift-dice-stage.is-rolling .rift-dice-lift{animation:rift-dice-land var(--rift-roll-ms) linear both}
+.rift-dice-stage.is-rolling .rift-dice-shadow{animation:rift-dice-shadow var(--rift-roll-ms) linear both}
+@keyframes rift-dice-roll{0%{transform:translateZ(-30px) rotateX(-535deg) rotateY(725deg) rotateZ(-160deg)}72%{transform:translateZ(-30px) rotateX(8deg) rotateY(-12deg) rotateZ(7deg)}88%{transform:translateZ(-30px) rotateX(-3deg) rotateY(4deg) rotateZ(-2deg)}100%{transform:translateZ(-30px) rotateX(0) rotateY(0) rotateZ(0)}}
+@keyframes rift-dice-land{0%{transform:translate(-9px,-6px) scale(.82)}28%{transform:translate(3px,-15px) scale(.94)}68%{transform:translate(0,3px) scale(1.03,.96)}82%{transform:translate(0,-4px) scale(.99,1.01)}94%{transform:translate(0,1px)}100%{transform:translate(0,0)}}
+@keyframes rift-dice-shadow{0%,28%{transform:scaleX(.55);opacity:.35}68%{transform:scaleX(1);opacity:1}82%{transform:scaleX(.8);opacity:.65}100%{transform:scaleX(.9);opacity:1}}
+@media(prefers-reduced-motion:reduce){.rift-dice-stage.is-rolling .rift-dice-cube,.rift-dice-stage.is-rolling .rift-dice-lift,.rift-dice-stage.is-rolling .rift-dice-shadow{animation:none}}
+
+/* Two distinct coin faces flip in depth, then settle on the recorded result. */
+.rift-coin-stage{display:block;position:relative;width:88px;height:94px;perspective:260px}
+.rift-coin-shadow{position:absolute;left:15px;bottom:0;width:58px;height:9px;border-radius:50%;background:#081d2b80}
+.rift-coin-lift{position:absolute;left:7px;top:4px;width:74px;height:74px;transform-style:preserve-3d}
+.rift-coin-spin{display:block;position:relative;width:74px;height:74px;transform-style:preserve-3d}
+.rift-coin-edge{position:absolute;inset:3px;border-radius:50%;background:#b68a39}
+.rift-coin-face{display:block;position:absolute;inset:0;backface-visibility:hidden}
+.rift-coin-face.coin-front{transform:translateZ(2.5px)}
+.rift-coin-face.coin-back{transform:rotateY(180deg) translateZ(2.5px)}
+.rift-coin-face svg{display:block;width:74px;height:74px;stroke:#ffe3a0;stroke-width:1.5}
+.rift-coin-face .coin-disc-fill{fill:#d9b05a;stroke-width:2.5}
+.rift-coin-face .coin-inner-ring{fill:#e9c675;stroke:#8b6629;stroke-width:1}
+.rift-coin-face .coin-marks{fill:none;stroke:#fff0bd;stroke-width:1.5}
+.rift-coin-face .coin-sigil{fill:#65451c;stroke:none}
+.rift-coin-face .coin-sigil-cut{fill:none;stroke:#f4d78e;stroke-width:3.5;stroke-linejoin:miter}
+.rift-coin-face.coin-tail .coin-disc-fill{fill:#20465d}
+.rift-coin-face.coin-tail .coin-inner-ring{fill:#17384d;stroke:#dfb867}
+.rift-coin-face.coin-tail .coin-sigil{fill:#ffe5a4;stroke:none}
+.rift-coin-stage.is-flipping .rift-coin-spin{animation:rift-coin-flip var(--rift-flip-ms) cubic-bezier(.12,.65,.25,1) both}
+.rift-coin-stage.is-flipping .rift-coin-lift{animation:rift-coin-land var(--rift-flip-ms) linear both}
+.rift-coin-stage.is-flipping .rift-coin-shadow{animation:rift-coin-shadow var(--rift-flip-ms) linear both}
+@keyframes rift-coin-flip{0%{transform:rotateY(-1080deg) rotateX(24deg) rotateZ(-12deg)}72%{transform:rotateY(18deg) rotateX(-8deg) rotateZ(4deg)}88%{transform:rotateY(-7deg) rotateX(3deg) rotateZ(-2deg)}100%{transform:rotateY(0) rotateX(0) rotateZ(0)}}
+@keyframes rift-coin-land{0%{transform:translate(-6px,4px) scale(.8)}28%{transform:translate(2px,-14px) scale(.95)}72%{transform:translate(0,3px) scale(1)}86%{transform:translate(0,-3px)}100%{transform:translate(0,0)}}
+@keyframes rift-coin-shadow{0%{transform:scaleX(.7);opacity:.6}28%{transform:scaleX(.45);opacity:.3}72%{transform:scaleX(1.05);opacity:1}86%{transform:scaleX(.85);opacity:.7}100%{transform:scaleX(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.rift-coin-stage.is-flipping .rift-coin-spin,.rift-coin-stage.is-flipping .rift-coin-lift,.rift-coin-stage.is-flipping .rift-coin-shadow{animation:none}}
+
+/* Static preview uses the same face artwork as the result dice. */
+.rift-theme .coin-disc.rift-dice-preview{background:none;border:0;border-radius:0;box-shadow:none}
+.rift-dice-preview svg{display:block;width:75px;height:75px;stroke:#eccb7b;stroke-width:2;fill:#234b63}
+.rift-dice-preview .rift-pip{fill:#fff2ca;stroke:none}
+.rift-dice-preview .rift-rune path:first-child{fill:#ddb45c;stroke:#ffe1a0;stroke-width:1.5}
+.rift-dice-preview .rift-rune path+path{fill:none;stroke:#17384b;stroke-width:4;stroke-linejoin:miter}
+
+.rift-theme .coin-disc.rift-coin-preview{position:relative;background:none;border:0;border-radius:0;box-shadow:none}

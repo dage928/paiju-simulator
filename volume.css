@@ -1,0 +1,28 @@
+/* Downward drags belong to the device; upward drags scroll its lists. */
+#device-screen { touch-action: none; }
+#device-screen .volume-panel {
+  position:absolute; inset:0; z-index:30; box-sizing:border-box;
+  display:flex; flex-direction:column; align-items:center;
+  background:var(--screen-bg,#142d49); color:var(--screen-text,#f4f7fc);
+  padding:32px 16px 14px; animation:volume-enter 180ms ease-out;
+}
+.volume-panel button { color:inherit; }
+.volume-panel .volume-back { position:absolute; top:0; left:0; width:40px; height:36px; display:grid; place-items:center; }
+.volume-panel .volume-speaker { width:28px; height:28px; flex-shrink:0; color:var(--accent); }
+.volume-panel svg { fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.volume-panel output { font-size:38px; font-weight:700; font-variant-numeric:tabular-nums; line-height:1.2; margin-top:4px; }
+.volume-panel .volume-status { font-size:14px; line-height:1.4; margin:2px 0 10px; color:var(--screen-muted,#cedbeb); }
+.volume-panel .volume-controls { display:flex; gap:7px; align-items:center; width:100%; }
+.volume-panel .volume-controls button { width:36px; height:40px; flex:none; font-size:26px; background:var(--screen-panel,#233f5e); border:1px solid var(--screen-muted); border-radius:4px; }
+.volume-panel button:disabled { opacity:.4; }
+.volume-panel input { min-width:0; width:100%; height:40px; accent-color:var(--accent); margin:0; padding:0; touch-action:none; }
+.volume-panel .volume-help { font-size:13px; line-height:1.4; color:var(--screen-muted,#cedbeb); margin:8px 0; }
+.volume-panel .volume-effects { width:100%; min-height:36px; display:flex; align-items:center; justify-content:space-between; padding:0 10px; margin-bottom:10px; font-size:15px; background:var(--screen-panel,#233f5e); border:1px solid var(--screen-muted); }
+.volume-panel .volume-effects span { font-size:14px; color:var(--screen-muted); }
+.volume-panel .volume-effects[aria-checked=true] span { color:var(--accent); }
+.volume-panel .volume-confirm { margin-top:auto; min-height:40px; width:100%; background:var(--accent); color:var(--screen-bg,#142d49); font-size:19px; font-weight:700; border:1px solid var(--accent); }
+.volume-panel :focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.volume-panel .volume-mute,.volume-panel.muted .volume-waves { display:none; }
+.volume-panel.muted .volume-mute { display:initial; }
+@keyframes volume-enter { from { transform:translateY(-16px); opacity:.5; } to { transform:translateY(0); opacity:1; } }
+@media(prefers-reduced-motion:reduce) { #device-screen .volume-panel { animation:none; } }

@@ -1,0 +1,68 @@
+/* Physical-display pass: retain the fixed canvas and all existing actions. */
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .screen-action{font-size:18px!important}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .duel-clock{height:28px;font-size:14px;flex-shrink:0}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .duel-clock time{font-size:22px;letter-spacing:-.02em}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .duel-clock svg{width:14px;height:14px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .duel-player{gap:2px;padding:5px 17px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .duel-player:before{inset:3px 7px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .flow-header{height:56px;min-height:56px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .flow-header strong{font-size:18px;line-height:1.25}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .flow-header>span{font-size:14px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .flow-choice{font-size:20px;min-height:48px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .home-title{padding:20px 17px 12px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .home-title p,:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .flow-foot{font-size:14px;line-height:1.5}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .hub-options{padding-top:30px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-sheet{padding:10px 10px 6px;gap:9px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-row{min-height:64px;grid-template-columns:25px 1fr 25px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .row-value small{display:none}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .row-value strong{font-size:20px;white-space:normal;overflow-wrap:anywhere}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-row:first-child .row-value strong{font-size:24px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-result{height:68px;gap:3px;padding:4px 6px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-result>small{font-size:14px;line-height:18px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-result-buttons button{font-size:24px;min-height:36px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .settle-help{font-size:14px;line-height:1.4;margin:0}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .archive-row{min-height:120px;padding:10px 0;align-items:stretch}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .archive-open strong{font-size:20px;line-height:1.35;overflow-wrap:anywhere}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .archive-open small{font-size:14px;line-height:1.5}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .archive-delete{width:38px;font-size:16px;flex-shrink:0}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .record-scroll{flex:1;height:auto}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .log-item{font-size:18px;min-height:100px;padding:12px 4px!important;line-height:1.4!important}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .log-item small{font-size:16px;margin-bottom:5px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .record-tip{font-size:16px;padding:8px 0;line-height:1.4}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .record-tabs{height:44px;min-height:44px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .record-tabs button{font-size:18px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .recap-page{padding:8px 12px;gap:8px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .recap-page>svg{width:24px;height:24px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .recap-page strong{font-size:20px;line-height:1.3}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .recap-page p{font-size:16px;line-height:1.4}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .review-link{font-size:16px;min-height:34px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .recap-page .screen-action{font-size:20px!important;min-height:42px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .screen-titlebar{font-size:18px;min-height:40px;height:auto;padding-block:5px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .detail-text{font-size:18px;line-height:1.5}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .audio-detail{gap:8px;margin-top:10px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .audio-detail .screen-action{font-size:18px;min-height:40px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .audio-time{font-size:16px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .flow-content .screen-hint{font-size:16px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .empty-screen{font-size:16px;line-height:1.6}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .more-grid button{font-size:16px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .exit-options{padding:14px 12px;gap:10px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .exit-options p,:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .capacity-message{font-size:16px;line-height:1.5}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .exit-options .screen-action{font-size:18px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .confirm-overlay{gap:12px;padding:14px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .confirm-overlay h2{font-size:20px}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .confirm-overlay p{font-size:16px;line-height:1.5;max-height:170px;overflow:auto}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .confirm-overlay button{font-size:18px}
+/* Calibration belongs to the web simulator, outside the device display. */
+#physical-preview{margin-top:16px;padding-top:4px}
+.calibration-ruler{overflow-x:auto;padding:14px 2px 8px}
+#calibration-line{height:14px;border:solid var(--ink);border-width:0 1px;position:relative;flex:none}
+#calibration-line:after{content:"";position:absolute;left:0;right:0;top:6px;border-top:1px solid var(--ink)}
+#calibration-form label{display:block;font-size:12px;margin:10px 0 7px}
+.calibration-input{display:flex;gap:6px}
+.calibration-input input{min-width:0;width:100%;background:transparent;border:1px solid var(--line);padding:8px;color:var(--ink);font-size:14px}
+.calibration-input button{flex:none;padding:8px 12px;background:var(--ink);color:var(--paper);border:0}
+#reset-calibration{margin-top:8px;padding:5px 0;background:none;border:0;color:var(--ink);text-decoration:underline;font-size:12px}
+
+/* Generic secondary-page names give way to content; back remains touchable. */
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .compact-backbar{height:34px;min-height:34px;flex-shrink:0;padding:1px 8px;border-bottom:0;display:grid;grid-template-columns:32px 1fr auto;gap:4px;align-items:center}
+:is(.ygo-theme,.rift-theme,.pokemon-theme) .device-screen .compact-backbar>button{width:32px;height:32px;min-height:32px;display:grid;place-items:center}

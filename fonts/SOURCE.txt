@@ -1,0 +1,3 @@
+Noto Serif SC, weight 600. Heading glyph subset supplied by Google Fonts.
+Source: https://github.com/google/fonts/tree/main/ofl/notoserifsc
+License: OFL.txt

@@ -1,0 +1,58 @@
+/* A single 240 × 320 launcher. Each game's existing palette stays local. */
+#device-screen .game-home{position:relative;isolation:isolate;height:320px;overflow:hidden;background:var(--home-bg);color:#f5f8fc;--home-accent:#72d9ec;--home-bg:#061726;--home-panel:#0c3047;--home-line:#377185}
+#device-screen .game-home.home-rift{--home-accent:#e6bc53;--home-bg:#0b202d;--home-panel:#173d51;--home-line:#7d7143}
+#device-screen .game-home.home-pokemon{--home-accent:#ffde59;--home-bg:#142d49;--home-panel:#25476a;--home-line:#718cac}
+.home-backdrop{position:absolute;inset:0;z-index:-1;opacity:.35;pointer-events:none}
+.home-backdrop svg{width:240px;height:320px;fill:none;stroke:var(--home-line);stroke-width:1}
+.home-content{height:100%;box-sizing:border-box;padding:10px 14px;display:grid;grid-template-rows:130px 104px 24px 20px;gap:4px}
+.home-heading{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:13px}
+.home-title-row{display:grid;grid-template-columns:32px 1fr 32px;align-items:center;width:calc(100% + 12px)}
+#device-screen .home-title-row h1{font-size:27px;line-height:1.3;margin:0;text-align:center;letter-spacing:.04em;color:inherit;white-space:nowrap}
+#device-screen .home-title-row button{height:40px;width:32px;display:grid;place-items:center;color:var(--home-accent)}
+.home-title-row svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.home-mark{height:68px;display:flex;align-items:center;justify-content:center;margin-bottom:6px;gap:5px}
+.home-mark>span{width:58px;height:64px;display:block;transform:rotate(-13deg)}
+.home-mark>span+span{transform:rotate(13deg)}
+.home-rift .home-mark>span+span{transform:scaleX(-1) rotate(-13deg)}
+.home-mark svg,.home-actor svg,.home-shard svg{width:100%;height:100%;overflow:visible}
+.home-actions{display:grid;grid-template-rows:48px 48px;gap:8px}
+#device-screen .home-actions button{display:flex;align-items:center;justify-content:space-between;padding:0 13px;background:var(--home-panel);border:1px solid var(--home-line);color:#f5f8fc;font-size:21px;font-weight:600;line-height:1.2;text-align:left;border-radius:3px}
+#device-screen .game-home .home-actions button.hw-selected{outline:2px solid var(--home-accent);outline-offset:2px;background:var(--home-panel)!important;box-shadow:none;color:#fff!important}
+.home-actions svg{width:22px;height:22px;stroke:var(--home-accent);stroke-width:6;fill:none;stroke-linejoin:round}
+.home-pagination{display:flex;align-items:center;justify-content:center;gap:8px}
+.home-pagination span{height:4px;width:12px;background:var(--home-line);border-radius:1px}
+.home-pagination .active{width:26px;background:var(--home-accent)}
+.home-swipe-hint{margin:0;text-align:center;font-size:13px;line-height:20px;color:#c4d9e5}
+.game-home button:focus-visible{outline:2px solid var(--home-accent);outline-offset:2px}
+.fist-cuff{fill:#24616c;stroke:#e6bc53;stroke-width:3}.fist-hand{fill:#b59c60;stroke:#f4de95;stroke-width:3;stroke-linejoin:round}.fist-lines{fill:none;stroke:#493e27;stroke-width:4;stroke-linecap:round}.fist-rune{fill:#8de9dc}
+.card-edge{fill:#775335;stroke:#e7ca84;stroke-width:3}.card-frame{fill:#09293e;stroke:#72d9ec;stroke-width:2}.card-line{fill:none;stroke:#4891a5;stroke-width:2}.card-eye{fill:#d9bd70;stroke:#eddfab;stroke-width:1.5}.card-core{fill:#14364a}
+.ball-red{fill:#df3445;stroke:#091e36;stroke-width:5}.ball-white{fill:#f2f6fc;stroke:#091e36;stroke-width:5}.ball-inside{fill:#a9e7fa;stroke:#091e36;stroke-width:5}.ball-seam{fill:none;stroke:#091e36;stroke-width:6}.ball-button{fill:#f5f8fc;stroke:#091e36;stroke-width:5}.ball-dot{fill:#c0d7e7}.ball-shine{fill:none;stroke:#ffb0b5;stroke-width:5;stroke-linecap:round}
+.home-intro{display:none;position:absolute;inset:0;z-index:3;background:var(--home-bg);overflow:hidden;pointer-events:none}
+.home-entering .home-intro{display:block;animation:home-curtain 800ms ease-out both;animation-delay:var(--home-delay,0ms)}
+.home-entering .home-content{animation:home-reveal 800ms ease-out both;animation-delay:var(--home-delay,0ms)}
+.home-actor{position:absolute;top:99px;width:108px;height:108px;--side:-1}
+.actor-left{left:19px}.actor-right{right:19px;--side:1}
+.home-rift .actor-right svg{transform:scaleX(-1)}
+.home-entering .home-actor{animation:home-collision 800ms cubic-bezier(.2,.75,.3,1) both;animation-delay:var(--home-delay,0ms)}
+.home-impact{position:absolute;left:110px;top:140px;width:20px;height:20px;background:var(--home-accent);clip-path:polygon(50% 0,60% 36%,100% 18%,72% 50%,100% 82%,60% 64%,50% 100%,40% 64%,0 82%,28% 50%,0 18%,40% 36%);opacity:0}
+.home-entering .home-impact{animation:home-impact 800ms ease-out both;animation-delay:var(--home-delay,0ms)}
+.home-ygo .home-actor{width:90px;height:128px;top:86px}
+.home-ygo .actor-left{left:35px}.home-ygo .actor-right{right:35px}
+.home-ygo.home-entering .home-actor{animation-name:home-card-crash}
+.home-shard{position:absolute;top:86px;left:75px;width:90px;height:128px;clip-path:var(--slice);opacity:0}
+.home-entering .home-shard{animation:home-shatter 800ms cubic-bezier(.16,1,.3,1) both;animation-delay:var(--home-delay,0ms)}
+.home-pokemon .home-actor{width:86px;height:86px;top:110px}
+.home-pokemon .actor-left{left:27px}.home-pokemon .actor-right{right:27px}
+.home-pokemon.home-entering .home-actor{animation-name:home-ball-arrive}
+.home-pokemon .home-impact{border-radius:50%;clip-path:none;background:#d9f6ff;width:90px;height:90px;left:75px;top:106px}
+.home-entering .home-intro .ball-lid,.home-entering .home-intro .ball-base{transform-box:fill-box;transform-origin:50% 50%;animation:home-ball-open 800ms ease-in-out both;animation-delay:var(--home-delay,0ms);--open:-1}
+.home-entering .home-intro .ball-base{--open:1}
+@keyframes home-collision{0%{transform:translateX(calc(var(--side)*130px)) rotate(calc(var(--side)*-15deg))}35%,43%{transform:translateX(calc(var(--side)*-7px)) rotate(0)}50%{transform:translateX(calc(var(--side)*-3px)) scale(.96)}100%{transform:translateX(calc(var(--side)*155px)) rotate(calc(var(--side)*12deg))}}
+@keyframes home-card-crash{0%{transform:translateX(calc(var(--side)*130px)) rotate(calc(var(--side)*-30deg));opacity:1}38%,44%{transform:translateX(calc(var(--side)*-35px)) rotate(calc(var(--side)*8deg));opacity:1}46%,100%{transform:translateX(calc(var(--side)*-35px));opacity:0}}
+@keyframes home-shatter{0%,43%{transform:translate(0,0);opacity:0}44%{transform:translate(0,0);opacity:1}90%,100%{transform:translate(var(--sx),var(--sy)) rotate(var(--sr));opacity:0}}
+@keyframes home-ball-arrive{0%{transform:translateX(calc(var(--side)*120px)) rotate(calc(var(--side)*-55deg));opacity:1}32%,70%{transform:translateX(0) rotate(0);opacity:1}100%{transform:translateX(calc(var(--side)*50px)) scale(1.4);opacity:0}}
+@keyframes home-ball-open{0%,36%{transform:translateY(0) rotate(0)}75%,100%{transform:translateY(calc(var(--open)*26px)) rotate(calc(var(--open)*18deg))}}
+@keyframes home-impact{0%,36%{transform:scale(.2);opacity:0}44%{transform:scale(2);opacity:.9}70%,100%{transform:scale(3.4);opacity:0}}
+@keyframes home-curtain{0%,55%{opacity:1}100%{opacity:0}}
+@keyframes home-reveal{0%,50%{opacity:0;transform:scale(.97)}100%{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.home-entering .home-intro{display:none}.home-entering .home-content{animation:none;opacity:1;transform:none}}

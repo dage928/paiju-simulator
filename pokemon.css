@@ -1,0 +1,90 @@
+/* Fixed opposing clocks frame a separately rotating reminder/control layer. */
+.pokemon-board{height:320px;width:240px;padding:8px;display:grid;grid-template-rows:32px 1fr 32px;gap:8px;background:var(--screen-bg)}
+.pokemon-rotor{min-height:0;display:grid;grid-template-rows:1fr 28px;gap:6px;transform:rotate(var(--pokemon-angle,0deg));transform-origin:center}
+.pokemon-clock{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:0 6px;border:1px solid #637b95;border-radius:3px;color:#e3ebf5}
+.pokemon-clock>span{display:flex;align-items:center;gap:4px;font-size:14px}.pokemon-clock svg{width:12px;height:12px}
+.pokemon-clock time{font-size:22px;font-variant-numeric:tabular-nums}.pokemon-clock.opponent{transform:rotate(180deg)}
+.pokemon-clock.running{color:#ffde59;border-color:#ffde59}
+.pokemon-reminders{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;min-height:0}
+.pokemon-reminder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid #b3c2d4!important;border-radius:5px;background:#f6f8fc!important;color:#19324c!important}
+.pokemon-reminder svg{width:28px;height:28px}.pokemon-reminder strong{font-size:20px;line-height:1.2}.pokemon-reminder span{font-size:14px;color:#415975;line-height:1.2}
+.pokemon-reminder[aria-pressed=true]{background:#c73240!important;border-color:#ed7e86!important;color:#fff!important}
+.pokemon-reminder[aria-pressed=true] span{color:#fff0f1}
+.pokemon-reminder:focus-visible{outline:2px solid #e6a900;outline-offset:-4px}
+.pokemon-turn-footer{display:grid;grid-template-columns:1fr 36px 36px;gap:4px;align-items:center;border-top:1px solid #637b95;padding-top:1px}
+.pokemon-turn-footer>span{font-size:13px;color:#d6e2f0}
+.pokemon-turn-footer button{height:26px;display:grid;place-items:center}.pokemon-turn-footer svg{width:23px;height:23px}
+.pokemon-turn-footer button:disabled{opacity:.3}
+.pokemon-theme .duel-ready p,.pokemon-theme .order-actions p{font-size:16px;line-height:1.5}
+.pokemon-theme .duel-ready>small{font-size:13px}.pokemon-theme .screen-nav button{font-size:14px}
+.pokemon-theme .screen-nav svg{width:16px;height:16px}.pokemon-theme .screen-header .game-trigger{font-size:14px}
+.pokemon-theme .hardware-button:disabled{opacity:.45;cursor:default}
+.pokemon-theme .device-screen .hw-selected{background-color:#2d4d72!important;color:#fff!important;outline-color:#ffde59}
+.pokemon-theme .coin-topline{font-size:16px}.pokemon-theme .coin-topline button{font-size:14px!important}
+.pokemon-theme .coin-results{font-size:14px}.pokemon-theme .coin-amounts button{font-size:14px;height:28px}
+.pokemon-theme .screen-hint{font-size:14px}.pokemon-theme .coin-footnote{font-size:12px}
+.pokemon-theme .coin-disc.pokemon-preview{background:none;border:0;box-shadow:none;border-radius:0}
+.pokemon-random-art{display:block;width:80px;height:80px}.pokemon-random-art svg{display:block;width:100%;height:100%}
+.pokemon-preview .pokemon-random-art{width:75px;height:75px}
+.pokemon-theme .popup-coin .pokemon-random-art{width:100px;height:100px}
+.pokemon-theme .popup-coin{width:100px;height:100px;background:none;border:0;box-shadow:none}
+.pokemon-theme .popup-coin svg{width:100%;height:100%}
+.pokemon-theme .random-result,.pokemon-theme .random-mirrored{font-size:16px}
+/* Red/white reminders, yellow coin, blue instrument background. Pokémon only. */
+.pokemon-theme{--accent:#ffde59;--screen-bg:#142d49;--screen-panel:#233f5e;--screen-text:#f4f7fc;--screen-muted:#cedbeb}
+.pokemon-theme .device-screen{background:var(--screen-bg);outline-color:#101d2c}
+.pokemon-theme .device-body{background:linear-gradient(130deg,#34475b,#202d3d 65%)}
+.pokemon-theme .hardware-button{background:linear-gradient(90deg,#edf2f8,#bfccdb);color:#19324c;box-shadow:inset 2px 0 1px #fff,-2px 1px 3px #10211459}
+.pokemon-theme .hardware-button.select-key{background:#c73240;color:#fff;box-shadow:inset 2px 0 1px #ed7e86,-2px 1px 3px #10211459}
+.pokemon-theme .record-side-key{background:#334f70;color:#fff}.pokemon-theme .record-side-key.recording{background:#c73240}
+.pokemon-theme .pokemon-coin{background:#ffde59!important;color:#19324c!important;border-color:#ffde59!important}
+.pokemon-theme .screen-header,.pokemon-theme .screen-nav{background:#10243b;border-color:#637b95}
+.pokemon-theme .screen-nav button{color:#d6e2f0}.pokemon-theme .screen-nav button[aria-current=page]{background:#2d4d72;color:#ffde59}
+.pokemon-theme .device-screen .screen-action{background:#c73240!important;color:#fff!important;border-radius:4px!important}
+.pokemon-theme .device-screen .screen-action.secondary{background:#e7eef7!important;color:#19324c!important;border:1px solid #b3c2d4!important}
+.pokemon-theme .device-screen .screen-action.hw-selected{background:#a92332!important;outline-color:#ffde59;color:#fff!important}
+.pokemon-theme .device-screen .screen-action.secondary.hw-selected{background:#d0e0f4!important;color:#19324c!important;outline-color:#284b74}
+.pokemon-theme .device-screen .flow-choice{background:#233f5e;border-color:#637b95}
+.pokemon-theme .device-screen .flow-choice.chosen,.pokemon-theme .device-screen .settle-row.row-active{background:#2d4d72;border-color:#ffde59}
+.pokemon-theme .device-screen .settle-row,.pokemon-theme .device-screen .settle-result{background:#233f5e;border-color:#637b95}
+.pokemon-theme .device-screen .settle-result.row-active{border-color:#ffde59}
+.pokemon-theme .device-screen .settle-result-buttons button[aria-pressed=true]{background:#ffde59;color:#19324c;border-color:#ffde59}
+.pokemon-theme .device-screen .record-tabs{background:#10243b;border-color:#637b95}
+.pokemon-theme .device-screen .record-tabs button[aria-pressed=true]{background:#2d4d72;color:#ffde59}
+.pokemon-theme .device-screen :is(.flow-header,.screen-titlebar,.full-header,.log-item){border-color:#637b95;color:#f4f7fc}
+.pokemon-theme .device-screen :is(.empty-screen,.detail-text,.screen-hint,.audio-time,.log-item small,.coin-results,.coin-footnote,.recap-page p,.flow-foot,.archive-open small){color:#cedbeb}
+.pokemon-theme .device-screen .more-grid button{background:#233f5e;color:#f4f7fc;border:1px solid #637b95;border-radius:4px}
+.pokemon-theme :is(.duel-ready,.duel-order,.record-overlay){background:#142d49}
+.pokemon-theme :is(.duel-ready p,.duel-ready>small,.order-actions p){color:#cedbeb}
+.pokemon-theme .coin-amounts button{border-color:#829ab4}.pokemon-theme .coin-amounts button[aria-pressed=true]{background:#ffde59;color:#19324c}
+.pokemon-theme .random-card{background:#233f5e;border-color:#829ab4}.pokemon-theme .random-overlay{background:#0b192bdc}
+.pokemon-theme .device-screen .screen-toast{background:#ffde59;color:#19324c;border-color:#ffde59}
+.pokemon-theme .device-screen ::selection{background:#ffde59;color:#19324c}
+.pokemon-theme .device-screen *{scrollbar-color:#829ab4 #142d49}
+
+/* One-second feedback matches the existing result gate; random values are never animated state. */
+.pokemon-random-art{position:relative;perspective:280px}
+.pokemon-art-shadow{position:absolute;left:20%;bottom:1px;width:60%;height:8%;border-radius:50%;background:#08192b90}
+.pokemon-coin-lift{position:absolute;left:9%;top:3%;width:82%;height:82%;transform-style:preserve-3d}
+.pokemon-coin-spin{display:block;position:relative;width:100%;height:100%;transform-style:preserve-3d}
+.pokemon-coin-face{position:absolute;inset:0;backface-visibility:hidden;display:block}
+.pokemon-coin-face.coin-front{transform:translateZ(2px)}.pokemon-coin-face.coin-back{transform:rotateY(180deg) translateZ(2px)}
+.pokemon-coin-edge{position:absolute;inset:3%;border-radius:50%;background:#d6ad32}
+.pokemon-coin-stage.is-flipping .pokemon-coin-spin{animation:pokemon-ball-flip 1s cubic-bezier(.15,.6,.3,1) both}
+.pokemon-coin-stage.is-flipping .pokemon-coin-lift{animation:pokemon-ball-toss 1s linear both}
+.pokemon-coin-stage.is-flipping .pokemon-art-shadow,.pokemon-dice-stage.is-rolling .pokemon-art-shadow{animation:pokemon-art-shadow 1s linear both}
+.pokemon-dice-stage{--die-size:72px;--die-half:36px}.pokemon-preview .pokemon-dice-stage{--die-size:60px;--die-half:30px}
+.pokemon-dice-lift{position:absolute;width:var(--die-size);height:var(--die-size);left:calc(50% - var(--die-half));top:calc(50% - var(--die-half) - 4px);transform-style:preserve-3d}
+.pokemon-dice-cube{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transform:translateZ(calc(-1 * var(--die-half)))}
+.pokemon-die-face{position:absolute;inset:0;display:block;backface-visibility:hidden;background:#f6f8fc;border-radius:6px}
+.pokemon-die-face.face-front{transform:translateZ(var(--die-half))}.pokemon-die-face.face-back{transform:rotateY(180deg) translateZ(var(--die-half))}
+.pokemon-die-face.face-right{transform:rotateY(90deg) translateZ(var(--die-half))}.pokemon-die-face.face-left{transform:rotateY(-90deg) translateZ(var(--die-half))}
+.pokemon-die-face.face-top{transform:rotateX(90deg) translateZ(var(--die-half))}.pokemon-die-face.face-bottom{transform:rotateX(-90deg) translateZ(var(--die-half))}
+.pokemon-dice-stage.is-rolling .pokemon-dice-cube{animation:pokemon-die-roll 1s cubic-bezier(.12,.65,.26,1) both}
+.pokemon-dice-stage.is-rolling .pokemon-dice-lift{animation:pokemon-die-land 1s linear both}
+@keyframes pokemon-ball-flip{0%{transform:rotateY(-1080deg) rotateX(18deg) rotateZ(-8deg)}72%{transform:rotateY(15deg) rotateX(-6deg) rotateZ(3deg)}88%{transform:rotateY(-5deg) rotateX(2deg)}100%{transform:rotateY(0) rotateX(0) rotateZ(0)}}
+@keyframes pokemon-ball-toss{0%{transform:translateY(4px) scale(.85)}30%{transform:translateY(-13px) scale(.96)}72%{transform:translateY(2px)}87%{transform:translateY(-2px)}100%{transform:translateY(0) scale(1)}}
+@keyframes pokemon-die-roll{0%{transform:translateZ(calc(-1 * var(--die-half))) rotateX(-530deg) rotateY(720deg) rotateZ(-150deg)}72%{transform:translateZ(calc(-1 * var(--die-half))) rotateX(8deg) rotateY(-10deg) rotateZ(5deg)}88%{transform:translateZ(calc(-1 * var(--die-half))) rotateX(-3deg) rotateY(3deg) rotateZ(-2deg)}100%{transform:translateZ(calc(-1 * var(--die-half))) rotateX(0) rotateY(0) rotateZ(0)}}
+@keyframes pokemon-die-land{0%{transform:translate(-7px,-4px) scale(.8)}28%{transform:translate(2px,-12px) scale(.88)}70%{transform:translate(0,3px) scale(1.02,.97)}84%{transform:translate(0,-3px) scale(.99,1.01)}100%{transform:translate(0,0) scale(1)}}
+@keyframes pokemon-art-shadow{0%{opacity:.5;transform:scaleX(.7)}30%{opacity:.3;transform:scaleX(.5)}72%{opacity:1;transform:scaleX(1)}86%{opacity:.7;transform:scaleX(.8)}100%{opacity:1;transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.pokemon-coin-stage.is-flipping *,.pokemon-dice-stage.is-rolling *{animation:none!important}}

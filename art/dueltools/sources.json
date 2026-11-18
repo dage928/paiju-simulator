@@ -1,0 +1,19 @@
+{
+  "source": "User-supplied DuelTools(64bit,_Android7).apk; sharedassets0.assets Texture2D",
+  "assets": {
+    "coin-head": 94,
+    "coin-tail": 19,
+    "dice-1": 59,
+    "dice-2": 145,
+    "dice-3": 37,
+    "dice-4": 106,
+    "dice-5": 31,
+    "dice-6": 20,
+    "dice-roll-1": 14,
+    "dice-roll-2": 21,
+    "dice-roll-3": 61,
+    "dice-roll-4": 122,
+    "dice-roll-5": 105
+  },
+  "processing": "Unmodified extracted PNG textures; transparent display sizing and animation via CSS."
+}
